@@ -74,6 +74,47 @@ nav {
   border: 2px solid lightgray;
 }
 
+.buttonColor {
+  background-color: forestgreen;
+  /* Long hand */
+  transition-property: background-color; /* Hvilken egenskap skal endres */
+  transition-timing-function: ease-in; /* Hvordan det skal endres*/
+  transition-delay: 0.5s; /* Hvor lang tid mellom hover og endring*/
+  transition-duration: 1s; /* Hvor lang tid på endring*/
+
+  /*  Short hand */
+  transition: background-color ease-in 0.5s 1s;
+}
+
+.buttonColor:hover {
+  background-color: lightgreen;
+}
+
+.buttonSize {
+  width: inherit; /* Arver fra .button er 100px */
+  transition-property: scale;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+}
+
+.buttonSize:hover {
+  scale: 1.5;
+}
+
+.buttonOpacity {
+  opacity: 0.5;
+  transition-property: opacity ;
+  transition-timing-function: ease-out;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+}
+
+.buttonOpacity:hover {
+  opacity: 1;
+}
+
+
 /* ANIMASJONER */
 .card {
   width: 300px;
@@ -82,11 +123,76 @@ nav {
   border-radius: 20px;
 }
 
+.slideInLeftCard {
+  /* Long hand */
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.5s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+
+  /* Short hand */
+  animation: slideInLeft 3s ease-in 0.5s 2 forwards; 
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-1000px);
+    background-color: lightsalmon;
+  }
+  to {
+    transform: translateX(0);
+    background-color: orange;
+  }
+}
+
+.slideInRightCard {
+   /* Long hand */
+   animation-name: slideInRight;
+   animation-duration: 3s;
+   animation-timing-function: ease-in;
+   animation-delay: 0.5s;
+   animation-iteration-count: 2;
+   animation-fill-mode: forwards;
+
+    /* Short hand */
+  animation: slideInRight 3s ease-in 0.5s 2 forwards; 
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .rotateCard {
   width: 100px;
   border: 2px solid lightgray;
   padding: 10px;
   border-radius: 20px;
+
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* FOOTER */
