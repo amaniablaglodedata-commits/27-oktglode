@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 3px solid black;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+.logo {
+  height: 32px;
+  width: 32px;
+  background-color: white;
+}
+
+/* MAIN */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.section {
+  height: 100vh;
+}
+
+#transition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* OVERGANGER */
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 12px;
+  width: 100px;
+  border-radius: 40px;
+  border: 2px solid lightgray;
+}
+
+/* ANIMASJONER */
+.card {
+  width: 300px;
+  border: 2px solid lightgray;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.rotateCard {
+  width: 100px;
+  border: 2px solid lightgray;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid black;
+  padding: 16px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: black;
+}
